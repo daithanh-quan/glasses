@@ -17,11 +17,15 @@ export default class Home extends Component {
   render() {
     return (
       <div>
-        <img src="./glassesImage/background.jpg" alt="" className="w-100 " />
-        <div className="glasses">
+        <img src="./glassesImage/background.jpg" alt="" className="img" />
+        <div className="body">
           <Header />
-          <Avatar item={this.state} />
-          <ListGlasses handleChange={this.changeGlasses} />
+          <div className="container py-5">
+            <div className="row justify-content-md-between">
+              <Avatar item={this.state} />
+              <ListGlasses handleChange={this.changeGlasses} />
+            </div>
+          </div>
         </div>
       </div>
     )

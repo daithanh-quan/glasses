@@ -6,14 +6,14 @@ class ListGlasses extends Component {
     return (
       data.map((item) => {
         return (
-          <div className="col-lg-2 col-sm-3 p-3"
+          <div className="col-xl-2 col-lg-3 col-sm-4 col"
             key={item.id}
             style={{ cursor: "pointer" }}
             onClick={() => {
               this.props.handleChange(item)
             }}
           >
-            <img src={item.url} alt="" style={{ width: '150px' }} />
+            <img src={item.url} alt="" className="img__glasses" />
           </div>
         )
       })
@@ -21,8 +21,8 @@ class ListGlasses extends Component {
   }
   render() {
     return (
-      <div className="container bg-white rounded">
-        <div className="row text-center">
+      <div className="col-12 py-2 my-sm-5 my-3 bg-light rounded">
+        <div className="row text-sm-center text-center">
           {this.getGlasses()}
         </div>
       </div>
